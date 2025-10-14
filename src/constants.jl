@@ -23,7 +23,7 @@ conus_epsg  = "EPSG:5070"
 alaska_epsg = "EPSG:3338"
 hawaii_epsg = "EPSG:26904"
 
-const DISTANCE_THRESHOLD_KM = DISTANCE_THRESHOLD_MILES * 1.609344
+const KM_PER_MILE     = 1.609344
 const EARTH_RADIUS_KM = 6371.0
 
 const whites = ["white", "ivory", "ivory1", "mintcream", "snow", "snow1", "honeydew", "honeydew1", 
@@ -135,4 +135,4 @@ const grays = ["gray100", "grey100", "gray99", "grey99", "gray98", "grey98", "gr
 "gray7", "grey7", "gray6", "grey6", "gray5", "grey5", "gray4", "grey4", "gray3", "grey3", 
 "gray2", "grey2", "gray1", "grey1", "black", "gray0", "grey0"]
 
-export whites, reds, oranges, yellows, greens, cyans, blues, purples, pinks, browns, grays, VALID_STATE_CODES, VALID_STATEFPS, std_crs, conus_crs, conus_epsg, alaska_epsg, hawaii_epsg, DISTANCE_THRESHOLD_MILES, DISTANCE_THRESHOLD_KM, EARTH_RADIUS_KM
+export whites, reds, oranges, yellows, greens, cyans, blues, purples, pinks, browns, grays, VALID_STATE_CODES, VALID_STATEFPS, std_crs, conus_crs, conus_epsg, alaska_epsg, hawaii_epsg, KM_PER_MILE, EARTH_RADIUS_KM
