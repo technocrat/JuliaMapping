@@ -29,4 +29,4 @@ See `Project.toml` for current dependencies.
 
 ## License
 
-MIT License
+MIT License# JuliaMapping v0.1.0
