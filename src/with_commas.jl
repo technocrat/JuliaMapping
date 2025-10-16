@@ -29,3 +29,5 @@ function with_commas(x)
   x = Int64.(x)
   return Humanize.digitsep.(x)
 end
+
+export with_commas

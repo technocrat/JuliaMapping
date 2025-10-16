@@ -27,3 +27,5 @@ function percent(x::Float64)
   x = Float64(x)
   return string(round(x * 100; digits=2)) * "%"
 end 
+
+export percent
