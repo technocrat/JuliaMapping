@@ -23,6 +23,7 @@ include("percent.jl")
 include("plot_colorscheme_grid.jl")
 include("plot_named_color_groups.jl")
 include("polygon_to_archgdal.jl")
+include("skew_test.jl")
 include("small_multiples.jl")
 include("snow.jl")
 include("split_strings_into_n_parts.jl")
@@ -32,8 +33,10 @@ include("with_commas.jl")
 export add_col_totals,
        add_row_totals,
        add_totals,
+       analyze_skewness,
        bullseye,
        clip_rings_to_states,
+       compare_skewness,
        create_state_union,
        create_county_union,
        create_filled_voting_contours!,
