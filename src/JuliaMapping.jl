@@ -1,8 +1,10 @@
 module JuliaMapping
 
 include("bullseye.jl")
+include("clip_rings_to_states.jl")
 include("constants.jl")
 include("contours.jl")
+include("create_isopleth_rings.jl")
 include("dms_to_decimal.jl")
 include("dots.jl")
 include("ensure_types.jl")
@@ -13,13 +15,14 @@ include("get_nth_table.jl")
 include("get_sheet.jl")
 include("hard_wrap.jl")
 include("haversine_distance_km.jl")
+include("hist_dist.jl")
 include("inspect_shp.jl")
+include("make_geographic_circle.jl")
 include("margins.jl")
 include("percent.jl")
 include("plot_colorscheme_grid.jl")
 include("plot_named_color_groups.jl")
-include("quick_hist.jl")
-include("radius_map.jl")
+include("polygon_to_archgdal.jl")
 include("small_multiples.jl")
 include("snow.jl")
 include("split_strings_into_n_parts.jl")
@@ -31,6 +34,7 @@ export add_col_totals,
        add_totals,
        bullseye,
        clip_rings_to_states,
+       create_state_union,
        create_county_union,
        create_filled_voting_contours!,
        create_isopleth_rings,
@@ -46,6 +50,7 @@ export add_col_totals,
        get_sheet,
        hard_wrap,
        haversine_distance_km,
+       log_dist,
        inspect_shp,
        make_combined_table,
        make_geographic_circle,
@@ -57,7 +62,9 @@ export add_col_totals,
        polygon_to_archgdal,
        pump_comparison_test,
        quick_hist,
+       raw_dist,
        ripleys_k,
+       scaled_dist,
        show_named_color_groups,
        split_string_into_n_parts,
        uniform_subset_sum_indices,

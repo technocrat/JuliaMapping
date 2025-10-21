@@ -2,7 +2,7 @@
 
 julia_version = "1.12.0"
 manifest_format = "2.0"
-project_hash = "b91c80343c3995441dc48631a2f12af6ee0f6a4f"
+project_hash = "0fc1917a61625db80bbe336190e8a50e78f12ba7"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -1175,7 +1175,7 @@ uuid = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 version = "3.1.3+0"
 
 [[deps.JuliaMapping]]
-deps = ["AbstractTrees", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "NaturalEarth", "NearestNeighbors", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "XLSX"]
+deps = ["AbstractTrees", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "Makie", "NaturalEarth", "NearestNeighbors", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "StatsBase", "XLSX"]
 path = "."
 uuid = "6b83013c-2924-4a0a-9bd5-5e672d644478"
 version = "0.1.0"
@@ -2484,7 +2484,7 @@ uuid = "8e850ede-7688-5339-a07c-302acd2aaf8d"
 version = "1.64.0+1"
 
 [[deps.oneTBB_jll]]
-deps = ["Artifacts", "JLLWrappers", "Libdl"]
+deps = ["Artifacts", "JLLWrappers", "LazyArtifacts", "Libdl"]
 git-tree-sha1 = "d5a767a3bb77135a99e433afe0eb14cd7f6914c3"
 uuid = "1317d2d5-d96f-522e-a858-c73665f53c3e"
 version = "2022.0.0+0"

@@ -36,6 +36,7 @@ HypothesisTests = "09f84164-cd44-5f33-b23f-e6b0d136a0d5"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 KernelDensity = "5ab0869b-81aa-558d-bb23-cbf5423bbe9b"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
 NaturalEarth = "436b0209-26ab-4e65-94a9-6526d86fea76"
 NearestNeighbors = "b8a86587-4115-5ab1-83bc-aa920d37bbce"
 Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
@@ -50,14 +51,7 @@ Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
-
 [compat]
-julia = "1.10"
 AbstractTrees = "0.4.5"
 ArchGDAL = "0.10.10"
 Breakers = "0.1.0"
@@ -82,7 +76,7 @@ GeoDataFrames = "0.4.0"
 GeoInterfaceMakie = "0.1.9"
 GeoJSON = "0.8.4"
 GeoMakie = "0.7.15"
-GeometryBasics = "0.5.10"
+GeometryBasics = "0.2.1 - 0.5.10"
 Gumbo = "0.8.3"
 HTTP = "1.10.19"
 Humanize = "1.0.0"
@@ -90,6 +84,7 @@ HypothesisTests = "0.11.5"
 JSON = "0.21.4"
 KernelDensity = "0.6.10"
 LinearAlgebra = "1.12.0"
+Makie = "0.17.8 - 0.24.6"
 NaturalEarth = "0.1.0"
 NearestNeighbors = "0.4.22"
 Pluto = "0.20.19"
@@ -103,3 +98,10 @@ StaticArrays = "1.9.15"
 Statistics = "1.11.1"
 StatsBase = "0.34.6"
 XLSX = "0.10.4"
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
