@@ -77,3 +77,5 @@ function create_isopleth_rings(centroids_geo, distances=[25, 50, 75, 100, 150])
     
     return rings
 end
+
+export create_isopleth_rings
