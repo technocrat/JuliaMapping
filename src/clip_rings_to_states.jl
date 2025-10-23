@@ -52,4 +52,5 @@ function clip_rings_to_states(rings, state_union)
     
     return clipped_rings
 end
-clip_rings_to_states
+
+export clip_rings_to_states
