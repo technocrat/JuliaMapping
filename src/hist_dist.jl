@@ -99,7 +99,7 @@ fg = quick_hist(df, :Population)
 fg = quick_hist(df, :Population, bins=30)
 ```
 """
-function quick_hist(df::DataFrame, column::Symbol; bins=20)
+function raw_hist(df::DataFrame, column::Symbol; bins=20)
     # Get the data and check for actual negative values
     data_vec = df[!, column]
     has_negative = any(data_vec .< 0)
