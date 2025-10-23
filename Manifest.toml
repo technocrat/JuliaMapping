@@ -2,7 +2,7 @@
 
 julia_version = "1.12.0"
 manifest_format = "2.0"
-project_hash = "0fc1917a61625db80bbe336190e8a50e78f12ba7"
+project_hash = "639225f0a1acadf2700863eeeda5c07fa1b57550"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -64,6 +64,20 @@ weakdeps = ["SparseArrays", "StaticArrays"]
 git-tree-sha1 = "7e651ea8d262d2d74ce75fdf47c4d63c07dba7a6"
 uuid = "35492f91-a3bd-45ad-95db-fcad7dcfedb7"
 version = "1.2.0"
+
+[[deps.AlgebraOfGraphics]]
+deps = ["Accessors", "Colors", "DataAPI", "Dates", "Dictionaries", "FileIO", "GLM", "GeoInterface", "GeometryBasics", "GridLayoutBase", "Isoband", "KernelDensity", "Loess", "Makie", "NaturalSort", "PlotUtils", "PolygonOps", "PooledArrays", "PrecompileTools", "RelocatableFolders", "StatsBase", "StructArrays", "Tables"]
+git-tree-sha1 = "0acd6ae46f362503759d056a2e0c6842c81e38b0"
+uuid = "cbdf2221-f076-402e-a563-3d30da359d67"
+version = "0.11.8"
+
+    [deps.AlgebraOfGraphics.extensions]
+    AlgebraOfGraphicsDynamicQuantitiesExt = "DynamicQuantities"
+    AlgebraOfGraphicsUnitfulExt = "Unitful"
+
+    [deps.AlgebraOfGraphics.weakdeps]
+    DynamicQuantities = "06fc5a27-2a28-4c7c-a15d-362465fb6821"
+    Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 
 [[deps.AliasTables]]
 deps = ["PtrArrays", "Random"]
@@ -448,6 +462,12 @@ deps = ["InverseFunctions", "Test"]
 git-tree-sha1 = "80c3e8639e3353e5d2912fb3a1916b8455e2494b"
 uuid = "b429d917-457f-4dbc-8f4c-0cc954292b1d"
 version = "0.4.0"
+
+[[deps.Dictionaries]]
+deps = ["Indexing", "Random", "Serialization"]
+git-tree-sha1 = "a86af9c4c4f33e16a2b2ff43c2113b2f390081fa"
+uuid = "85a47980-9c8c-11e8-2b9f-f7ca1fa99fb4"
+version = "0.4.5"
 
 [[deps.DiffResults]]
 deps = ["StaticArraysCore"]
@@ -1013,6 +1033,11 @@ git-tree-sha1 = "0936ba688c6d201805a83da835b55c61a180db52"
 uuid = "905a6f67-0a94-5f89-b386-d35d92009cd1"
 version = "3.1.11+0"
 
+[[deps.Indexing]]
+git-tree-sha1 = "ce1566720fd6b19ff3411404d4b977acd4814f9f"
+uuid = "313cdc1a-70c2-5d6a-ae34-0150d3930a38"
+version = "1.1.1"
+
 [[deps.IndirectArrays]]
 git-tree-sha1 = "012e604e1c7458645cb8b436f8fba789a51b257f"
 uuid = "9b13fd28-a010-5f03-acff-a1bbcff69959"
@@ -1175,7 +1200,7 @@ uuid = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 version = "3.1.3+0"
 
 [[deps.JuliaMapping]]
-deps = ["AbstractTrees", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "Makie", "NaturalEarth", "NearestNeighbors", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "StatsBase", "XLSX"]
+deps = ["AbstractTrees", "AlgebraOfGraphics", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "Makie", "NaturalEarth", "NearestNeighbors", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "StatsBase", "XLSX"]
 path = "."
 uuid = "6b83013c-2924-4a0a-9bd5-5e672d644478"
 version = "0.1.0"
@@ -1331,6 +1356,12 @@ deps = ["Artifacts", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll"]
 git-tree-sha1 = "8e6a74641caf3b84800f2ccd55dc7ab83893c10b"
 uuid = "d3a379c0-f9a3-5b72-a4c0-6bf4d2e8af0f"
 version = "2.17.0+0"
+
+[[deps.Loess]]
+deps = ["Distances", "LinearAlgebra", "Statistics", "StatsAPI"]
+git-tree-sha1 = "f749e7351f120b3566e5923fefdf8e52ba5ec7f9"
+uuid = "4345ca2d-374a-55d4-8d30-97f9976e7612"
+version = "0.6.4"
 
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
@@ -1498,6 +1529,11 @@ deps = ["Downloads", "GeoJSON", "Pkg", "Scratch"]
 git-tree-sha1 = "3f75210ac08fe4496a55f9694b95859c40b8eaea"
 uuid = "436b0209-26ab-4e65-94a9-6526d86fea76"
 version = "0.1.0"
+
+[[deps.NaturalSort]]
+git-tree-sha1 = "eda490d06b9f7c00752ee81cfa451efe55521e21"
+uuid = "c020b1a1-e9b0-503a-9c33-f039bfc54a85"
+version = "1.0.0"
 
 [[deps.NearestNeighbors]]
 deps = ["Distances", "StaticArrays"]
