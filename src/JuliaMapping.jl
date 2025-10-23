@@ -1,10 +1,13 @@
 module JuliaMapping
 
 include("bullseye.jl")
+include("choose_bin.jl")
 include("clip_rings_to_states.jl")
 include("constants.jl")
 include("contours.jl")
 include("create_isopleth_rings.jl")
+include("create_county_union.jl"),
+include("create_state_union.jl")
 include("dms_to_decimal.jl")
 include("dots.jl")
 include("ensure_types.jl")
@@ -34,7 +37,10 @@ export add_col_totals,
        add_row_totals,
        add_totals,
        analyze_skewness,
+       assess_spread_data,
+	   assess_uniform_distribution,
        bullseye,
+       check_outlier_emphasis
        clip_rings_to_states,
        compare_skewness,
        create_state_union,
@@ -42,6 +48,7 @@ export add_col_totals,
        create_filled_voting_contours!,
        create_isopleth_rings,
        create_state_union,
+       create_county_union,
        create_voting_contours!,
        dms_to_decimal,
        dots,
@@ -71,7 +78,11 @@ export add_col_totals,
        show_named_color_groups,
        split_string_into_n_parts,
        uniform_subset_sum_indices,
-       with_commas
+       with_commas,
+       detect_clustering, 
+       compute_fixed_intervals, 
+       compare_quantile_vs_jenks 
+       choose_binning_for_margins
 
 # Export constants
 export VALID_STATE_CODES,
