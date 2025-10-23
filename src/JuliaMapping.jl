@@ -6,8 +6,8 @@ include("clip_rings_to_states.jl")
 include("constants.jl")
 include("contours.jl")
 include("create_isopleth_rings.jl")
-include("create_county_union.jl"),
-include("create_state_union.jl"),
+include("create_county_union.jl")
+include("create_state_union.jl")
 include("dms_to_decimal.jl")
 include("dots.jl")
 include("ensure_types.jl")
