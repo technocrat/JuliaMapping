@@ -1,4 +1,4 @@
-using AlgebraOfGraphics, CairoMakie
+using AlgebraOfGraphics: CairoMakie
 using AlgebraOfGraphics: density
 using CairoMakie
 using CSV
