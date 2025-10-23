@@ -128,4 +128,4 @@ function quick_hist(df::DataFrame, column::Symbol; bins=20)
     return fg
 end
 
-export log_dist, scaled_dist, quick_hist
+export log_dist, scaled_dist, raw_hist
