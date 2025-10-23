@@ -5,6 +5,7 @@ authors = ["technocrat <public@careaga.net>"]
 
 [deps]
 AbstractTrees = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
+AlgebraOfGraphics = "cbdf2221-f076-402e-a563-3d30da359d67"
 ArchGDAL = "c9ce4bd3-c3d5-55b8-8973-c0e20141b8c3"
 Breakers = "e52b5ea0-8122-4946-b8e9-9981f9d15727"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
@@ -53,6 +54,7 @@ XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 
 [compat]
 AbstractTrees = "0.4.5"
+AlgebraOfGraphics = "0.6, 0.7"
 ArchGDAL = "0.10.10"
 Breakers = "0.1.0"
 CSV = "0.10.15"
