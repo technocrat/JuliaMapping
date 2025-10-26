@@ -1,4 +1,3 @@
-using DataFrames
 """
     dots(df::DataFrame, dots::Int)
 

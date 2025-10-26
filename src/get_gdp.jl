@@ -1,5 +1,3 @@
-using CSV
-using DataFrames
 
 """
     get_gdp(df::DataFrame, quarter::Int) -> DataFrame

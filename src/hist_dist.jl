@@ -1,10 +1,3 @@
-using AlgebraOfGraphics: CairoMakie
-using AlgebraOfGraphics: densitys
-using AlgebraOfGraphics: data
-using CairoMakie
-using CSV
-using DataFrames
-using StatsBase
 
 """
     log_dist(df::DataFrame, col::Symbol)

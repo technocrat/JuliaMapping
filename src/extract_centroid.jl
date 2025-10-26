@@ -1,4 +1,3 @@
-using ArchGDAL
 
 """
     extract_centroid(geometry)

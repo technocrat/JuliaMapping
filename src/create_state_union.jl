@@ -1,6 +1,3 @@
-using ArchGDAL
-using GeometryBasics
-using Statistics
 """
     create_state_union(states::DataFrame, geometry_col=:geometry)
 

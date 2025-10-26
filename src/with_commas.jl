@@ -1,4 +1,3 @@
-using Humanize
 
 """
     with_commas(x)

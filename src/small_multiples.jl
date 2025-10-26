@@ -1,7 +1,3 @@
-using CairoMakie
-using DataFrames
-using GeoMakie
-using PrettyTables
 
 """
     format_breaks(breaks::Vector{String})

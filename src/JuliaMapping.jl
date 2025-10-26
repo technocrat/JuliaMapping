@@ -1,5 +1,35 @@
 module JuliaMapping
 
+# All using statements from included files
+using AbstractTrees
+using AlgebraOfGraphics
+using ArchGDAL
+using Breakers
+using CairoMakie
+using ColorSchemes
+using Colors
+using CSV
+using DataFrames
+using DataFramesMeta
+using Dates
+using Distances
+using Distributions
+using GeoDataFrames
+using GeoMakie
+using GeometryBasics
+using GLM
+using Gumbo
+using HTTP
+using Humanize
+using KernelDensity
+using LinearAlgebra
+using PrettyTables
+using Printf
+using Random
+using Statistics
+using StatsBase
+using XLSX
+
 include("bullseye.jl")
 include("choose_bin.jl")
 include("clip_rings_to_states.jl")

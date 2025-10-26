@@ -1,6 +1,4 @@
-using DataFrames
-using DataFramesMeta
-using Printf
+# using statements moved to JuliaMapping.jl
 """
     bullseye(capital::String, capital_coords::String)
 

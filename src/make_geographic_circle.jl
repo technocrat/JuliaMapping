@@ -1,6 +1,3 @@
-using ArchGDAL
-using GeometryBasics
-using Statistics
 """
     make_geographic_circle(center_geo, radius_deg, n_pts=64)
 

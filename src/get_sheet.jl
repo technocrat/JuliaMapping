@@ -1,5 +1,3 @@
-using DataFrames
-using XLSX
 
 """
     get_sheet(file_name::String, sheet::Int) -> DataFrame

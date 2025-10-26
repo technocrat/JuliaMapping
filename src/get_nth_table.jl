@@ -1,7 +1,3 @@
-using HTTP
-using Gumbo
-using AbstractTrees
-using DataFrames
 
 """
     get_nth_table(url::String, n::Int=1) -> DataFrame

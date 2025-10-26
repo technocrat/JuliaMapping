@@ -1,5 +1,3 @@
-using CairoMakie
-using ColorSchemes
 
 """
     plot_colorscheme_grid(schemes; ncol=2)

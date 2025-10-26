@@ -1,7 +1,3 @@
-using CairoMakie
-using Colors
-using Printf
-using ColorSchemes
 
 """
     plot_named_color_groups(title, names; ncol=6, cell=(140,80), gap=(8,8), figsize=(1600,900))

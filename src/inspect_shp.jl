@@ -1,4 +1,3 @@
-using ArchGDAL
 """
     inspect_shp(path::String)
 

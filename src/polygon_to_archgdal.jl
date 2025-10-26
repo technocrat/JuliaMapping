@@ -1,6 +1,3 @@
-using ArchGDAL
-using GeometryBasics
-using Statistics
 
 """
     polygon_to_archgdal(poly::Polygon)

@@ -1,4 +1,3 @@
-using DataFrames
 
 # Helper: choose a type-compatible label for a given column eltype
 label_for_column(::Type{T}, label::AbstractString) where {T} =
