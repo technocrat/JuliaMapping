@@ -82,7 +82,7 @@ if equal-interval binning is suitable for the specified column.
 
 # Output
 Prints skewness, interval coefficient of variation, and a uniformity assessment.
-Also generates a histogram visualization via `quick_hist()`.
+Also generates a histogram visualization via `raw_hist()`.
 
 # Notes
 - Skewness near 0 and interval CV < 0.3 suggest suitability for equal intervals
@@ -112,7 +112,7 @@ function assess_uniform_distribution(df::DataFrame, col::Symbol)
     println("Uniformity score: $(interval_cv < 0.3 ? "Good for equal intervals" : "Consider other methods")")
     
     # Histogram to visualize
-    quick_hist(df, col)
+    raw_hist(df, col)
     
     return (skewness=sk, interval_cv=interval_cv)
 end
@@ -232,7 +232,7 @@ function detect_clustering(df::DataFrame, col::Symbol; n_bins::Int=5)
     
     # Visualize gap distribution
     gap_df = DataFrame(gap = gaps)
-    quick_hist(gap_df, :gap)
+    raw_hist(gap_df, :gap)
     
     return large_gaps
 end

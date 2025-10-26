@@ -34,22 +34,24 @@ include("with_commas.jl")
 
 # Export functions
 export add_col_totals,
+	   assess_uniform_distribution,
        add_row_totals,
        add_totals,
        analyze_skewness,
        assess_spread_data,
-	   assess_uniform_distribution,
        bullseye,
-       check_outlier_emphasis
+       check_outlier_emphasis,
+       choose_binning_for_margins,
        clip_rings_to_states,
+       compare_quantile_vs_jenks,
        compare_skewness,
-       create_state_union,
+       compute_fixed_intervals, 
        create_county_union,
        create_filled_voting_contours!,
        create_isopleth_rings,
        create_state_union,
-       create_county_union,
        create_voting_contours!,
+       detect_clustering, 
        dms_to_decimal,
        dots,
        extract_centroid,
@@ -60,8 +62,8 @@ export add_col_totals,
        get_sheet,
        hard_wrap,
        haversine_distance_km,
-       log_dist,
        inspect_shp,
+       log_dist,
        make_combined_table,
        make_geographic_circle,
        percent,
@@ -77,11 +79,8 @@ export add_col_totals,
        show_named_color_groups,
        split_string_into_n_parts,
        uniform_subset_sum_indices,
-       with_commas,
-       detect_clustering, 
-       compute_fixed_intervals, 
-       compare_quantile_vs_jenks 
-       choose_binning_for_margins
+       with_commas
+
 
 # Export constants
 export VALID_STATE_CODES,

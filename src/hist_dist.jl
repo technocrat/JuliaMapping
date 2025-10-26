@@ -1,5 +1,6 @@
 using AlgebraOfGraphics: CairoMakie
-using AlgebraOfGraphics: density
+using AlgebraOfGraphics: densitys
+using AlgebraOfGraphics: data
 using CairoMakie
 using CSV
 using DataFrames
