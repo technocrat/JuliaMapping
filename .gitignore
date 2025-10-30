@@ -25,3 +25,6 @@ Thumbs.db
 
 # Build artifacts
 docs/build/
+
+# Claude Code
+CLAUDE.md
