@@ -242,3 +242,5 @@ function make_marker(n::Int, size::Real, shape::String)
     
     return BezierPath(commands)
 end
+
+export make_marker

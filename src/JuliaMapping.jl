@@ -51,6 +51,7 @@ include("haversine_distance_km.jl")
 include("hist_dist.jl")
 include("inspect_shp.jl")
 include("make_geographic_circle.jl")
+include("make_marker")
 include("margins.jl")
 include("percent.jl")
 include("plot_colorscheme_grid.jl")
@@ -96,6 +97,7 @@ export add_col_totals,
        log_dist,
        make_combined_table,
        make_geographic_circle,
+       make_marker,
        percent,
        pick_random_subset,
        plot_colorscheme_grid,
