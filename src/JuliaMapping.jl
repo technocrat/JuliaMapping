@@ -28,6 +28,7 @@ using Printf
 using Random
 using Statistics
 using StatsBase
+using TOML
 using XLSX
 
 include("bullseye.jl")
@@ -42,6 +43,7 @@ include("dms_to_decimal.jl")
 include("dots.jl")
 include("ensure_types.jl")
 include("extract_centroid.jl")
+include("format_breaks.jl")
 include("format_table_as_text.jl")
 include("get_gdp.jl")
 include("get_nth_table.jl")

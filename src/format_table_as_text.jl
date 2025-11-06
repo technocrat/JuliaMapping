@@ -1,4 +1,3 @@
-
 """
     format_table_as_text(headers::Vector{String}, rows::Vector{Vector{String}}, padding::Int=2)
 
