@@ -1,38 +1,5 @@
 
 """
-    format_breaks(breaks::Vector{String})
-
-Format numeric range strings with comma separators for better readability.
-
-Converts range strings like "1000 - 5000" into formatted strings like "1,000 to 5,000",
-making population or other numeric ranges more human-readable.
-
-# Arguments
-- `breaks::Vector{String}`: Vector of range strings in format "number - number"
-
-# Returns
-- Vector of formatted range strings with commas and "to" separator
-
-# Example
-```julia
-breaks = ["1000 - 5000", "5000 - 10000", "10000 - 50000"]
-formatted = format_breaks(breaks)
-# Returns: ["1,000 to 5,000", "5,000 to 10,000", "10,000 to 50,000"]
-```
-
-# Details
-- Parses each range string by splitting on " - "
-- Converts to integers with rounding
-- Applies comma formatting using `with_commas`
-- Joins formatted values with " to "
-"""
-function format_breaks(breaks::Vector{String})
-    ranges = [round.(Int, parse.(Float64, split(s, " - "))) for s in breaks]
-    formatted_ranges = [with_commas.(range) for range in ranges]
-    return [join(range, " to ") for range in formatted_ranges]
-end
-
-"""
     make_combined_table(data::DataFrame, half::String, formatted_breaks::Vector{String} = formatted_breaks)
 
 Create a formatted summary table of population statistics by bins.

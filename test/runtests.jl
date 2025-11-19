@@ -1,5 +1,6 @@
 using JuliaMapping
 using Test
+using DataFrames
 
 @testset "JuliaMapping.jl" begin
 @testset "Distance calculations" begin
@@ -56,5 +57,81 @@ using Test
         result = split_string_into_n_parts("Hello World Test", 2)
         parts = split(result, "\n")
         @test length(parts) == 2
+    end
+    
+    @testset "Margin functions" begin
+        # Test data setup
+        df = DataFrame(
+            Category = ["A", "B", "C"],
+            Value1 = [1000, 2000, 3000],
+            Value2 = [500, 1500, 2500]
+        )
+        
+        # Test 1: add_totals formats numeric values with comma separators when format_commas is true
+        @testset "add_totals with comma formatting" begin
+            result = add_totals(df; format_commas=true)
+            # Check that numeric values are formatted with commas
+            @test result[1, :Value1] == "1,000"
+            @test result[2, :Value1] == "2,000"
+            @test result[3, :Value1] == "3,000"
+            @test result[4, :Value1] == "6,000"  # Total row
+            @test result[1, :Total] == "1,500"   # Row total
+            @test result[4, :Total] == "10,500"  # Grand total (sum of Total column)
+            # Check all values are strings
+            @test all(typeof(v) == String for v in result[!, :Value1])
+        end
+        
+        # Test 2: add_totals returns correct DataFrame without comma formatting when format_commas is false
+        @testset "add_totals without comma formatting" begin
+            result = add_totals(df; format_commas=false)
+            # Check that numeric values remain as numbers
+            @test result[1, :Value1] == 1000
+            @test result[2, :Value1] == 2000
+            @test result[3, :Value1] == 3000
+            @test result[4, :Value1] == 6000    # Total row
+            @test result[1, :Total] == 1500     # Row total
+            @test result[4, :Total] == 10500    # Grand total (sum of Total column)
+            # Check values are numeric
+            @test all(v isa Number for v in result[!, :Value1])
+        end
+        
+        # Test 3: add_col_totals correctly sums specified columns
+        @testset "add_col_totals with specified columns" begin
+            result = add_col_totals(df; cols_to_sum=["Value1"])
+            # Check that only Value1 is summed
+            @test result[4, :Value1] == 6000
+            # Value2 should have a label, not a sum
+            @test ismissing(result[4, :Value2])
+            # Category should have "Total" label
+            @test result[4, :Category] == "Total"
+        end
+        
+        # Test 4: add_col_totals correctly sums all numeric columns when cols_to_sum is not provided
+        @testset "add_col_totals with all numeric columns" begin
+            result = add_col_totals(df)
+            # Check that all numeric columns are summed
+            @test result[4, :Value1] == 6000
+            @test result[4, :Value2] == 4500
+            # Category should have "Total" label
+            @test result[4, :Category] == "Total"
+            # Check that we have 4 rows (3 original + 1 total)
+            @test nrow(result) == 4
+        end
+        
+        # Test 5: add_col_totals correctly handles cases with missing values in columns
+        @testset "add_col_totals with missing values" begin
+            df_missing = DataFrame(
+                Category = ["A", "B", "C"],
+                Value1 = [1000, missing, 3000],
+                Value2 = [500, 1500, missing]
+            )
+            # When columns contain missing values, they must be explicitly specified
+            result = add_col_totals(df_missing; cols_to_sum=["Value1", "Value2"])
+            # Check that sums skip missing values
+            @test result[4, :Value1] == 4000  # 1000 + 3000
+            @test result[4, :Value2] == 2000  # 500 + 1500
+            # Category should have "Total" label
+            @test result[4, :Category] == "Total"
+        end
     end
 end

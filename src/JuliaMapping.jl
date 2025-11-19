@@ -28,7 +28,6 @@ using Printf
 using Random
 using Statistics
 using StatsBase
-using TOML
 using XLSX
 
 include("bullseye.jl")
