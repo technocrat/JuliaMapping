@@ -67,6 +67,7 @@ include("with_commas.jl")
 # Export functions
 export add_col_totals,
 	   assess_uniform_distribution,
+	   assess_spread_data,
        add_row_totals,
        add_totals,
        analyze_skewness,
