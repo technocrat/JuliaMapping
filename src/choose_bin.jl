@@ -507,4 +507,4 @@ function choose_binning_for_margins(df::DataFrame; k::Int=5)
     end
 end
 
-export assess_spread_data, assess_uniform_distribution, check_outlier_emphasis, detect_clustering, compute_fixed_intervals, compare_quantile_vs_jenks, choose_binning_for_margins
+export assess_data_spread, assess_uniform_distribution, check_outlier_emphasis, detect_clustering, compute_fixed_intervals, compare_quantile_vs_jenks, choose_binning_for_margins
