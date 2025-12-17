@@ -2,7 +2,7 @@
 
 julia_version = "1.12.0"
 manifest_format = "2.0"
-project_hash = "38de8b81871f905f9b391e4958029ac289ab8718"
+project_hash = "a7f6b7db06dbcc89114e52d34260c93e192a41e1"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -111,6 +111,12 @@ version = "0.10.10"
 git-tree-sha1 = "f9e9a66c9b7be1ad7372bbd9b062d9230c30c5ce"
 uuid = "dce04be8-c92d-5529-be00-80e4d2c0e197"
 version = "2.5.0"
+
+[[deps.ArgParse]]
+deps = ["Logging", "TextWrap"]
+git-tree-sha1 = "22cf435ac22956a7b45b0168abbc871176e7eecc"
+uuid = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+version = "1.2.0"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
@@ -408,6 +414,17 @@ git-tree-sha1 = "a692f5e257d332de1e554e4566a4e5a8a72de2b2"
 uuid = "150eb455-5306-5404-9cee-2592286d6298"
 version = "0.6.4"
 
+[[deps.Coverage]]
+deps = ["ArgParse", "Artifacts", "CoverageTools", "Downloads", "HTTP", "JSON", "LibGit2", "MbedTLS", "SHA", "Scratch"]
+git-tree-sha1 = "41c077a9bf7c18a8f35b818ec87b982d84b99f08"
+uuid = "a2441757-f6aa-5fb2-8edb-039e3f45d037"
+version = "1.7.0"
+
+[[deps.CoverageTools]]
+git-tree-sha1 = "72ded72062bedff105dc69dfc0cb07d2197c1669"
+uuid = "c36e975a-824b-4404-a568-ef97ca766997"
+version = "1.3.2"
+
 [[deps.Crayons]]
 git-tree-sha1 = "249fe38abf76d48563e2f4556bebd215aa317e15"
 uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
@@ -534,9 +551,9 @@ version = "0.9.5"
 
 [[deps.Documenter]]
 deps = ["ANSIColoredPrinters", "AbstractTrees", "Base64", "CodecZlib", "Dates", "DocStringExtensions", "Downloads", "Git", "IOCapture", "InteractiveUtils", "JSON", "Logging", "Markdown", "MarkdownAST", "Pkg", "PrecompileTools", "REPL", "RegistryInstances", "SHA", "TOML", "Test", "Unicode"]
-git-tree-sha1 = "47ffb8f27ffc01e2e57e7ae5365ae5ceef87b03d"
+git-tree-sha1 = "b37458ae37d8bdb643d763451585cd8d0e5b4a9e"
 uuid = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-version = "1.14.1"
+version = "1.16.1"
 
 [[deps.Downloads]]
 deps = ["ArgTools", "FileWatching", "LibCURL", "NetworkOptions"]
@@ -1243,7 +1260,7 @@ uuid = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 version = "3.1.3+0"
 
 [[deps.JuliaMapping]]
-deps = ["AbstractTrees", "AlgebraOfGraphics", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "Makie", "NaturalEarth", "NearestNeighbors", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "StatsBase", "XLSX"]
+deps = ["AbstractTrees", "AlgebraOfGraphics", "ArchGDAL", "Breakers", "CSV", "CairoMakie", "CensusACS", "Chain", "ColorSchemes", "ColorVintner", "Colors", "CoordRefSystems", "Coverage", "DataFrames", "DataFramesMeta", "Dates", "Distances", "Distributions", "Fontconfig", "FreeTypeAbstraction", "GLM", "GLMNet", "GeoDataFrames", "GeoInterfaceMakie", "GeoJSON", "GeoMakie", "GeometryBasics", "Gumbo", "HTTP", "Humanize", "HypothesisTests", "JSON", "KernelDensity", "LinearAlgebra", "Makie", "NaturalEarth", "NearestNeighbors", "Plots", "Pluto", "PointProcesses", "PrettyTables", "Printf", "Random", "SQLite", "SpatialIndexing", "StaticArrays", "Statistics", "StatsBase", "XLSX"]
 path = "."
 uuid = "6b83013c-2924-4a0a-9bd5-5e672d644478"
 version = "0.1.0"
@@ -2340,6 +2357,11 @@ version = "0.1.1"
 deps = ["InteractiveUtils", "Logging", "Random", "Serialization"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 version = "1.11.0"
+
+[[deps.TextWrap]]
+git-tree-sha1 = "43044b737fa70bc12f6105061d3da38f881a3e3c"
+uuid = "b718987f-49a8-5099-9789-dcd902bef87d"
+version = "1.0.2"
 
 [[deps.Thrift_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "boost_jll"]

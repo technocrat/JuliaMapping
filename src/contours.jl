@@ -46,7 +46,35 @@ function create_county_union(df; geometry_col=:geometry)
     return county_union
 end
 
-# Function to create smooth voting contours
+"""
+    create_voting_contours!(ga, df; geometry_col=:geometry, value_col=:republican_pct, resolution=200, levels=10)
+
+Create smooth contour lines on an existing plot representing spatial interpolation of a value across geographic regions.
+
+# Arguments
+- `ga`: An existing Makie plot axis/figure to add contours to
+- `df`: DataFrame containing geometry and value columns for interpolation
+- `geometry_col::Symbol=:geometry`: Column name containing ArchGDAL geometry objects (default: `:geometry`)
+- `value_col::Symbol=:republican_pct`: Column name containing numeric values to interpolate (default: `:republican_pct`)
+  Can also use `:democratic_pct`, `:third_party_pct`, or any numeric column
+- `resolution::Int=200`: Grid resolution for interpolation (higher = smoother but slower)
+- `levels::Int=10`: Number of contour levels to draw, or a vector of specific levels
+
+# Returns
+- Tuple of (contour_lines, interpolated_grid_Z, x_grid, y_grid)
+
+# Details
+- Uses Gaussian kernel density weighting for smooth interpolation
+- Adaptive bandwidth based on data extent for automatic smoothing
+- Contour lines are labeled with values
+- Designed for political/electoral data (margins, vote shares, etc.)
+
+# Example
+```julia
+fig, ax, plt = scatter(counties_df.longitude, counties_df.latitude)
+cs, Z, x_grid, y_grid = create_voting_contours!(ax, counties_df, value_col=:margin_pct)
+```
+"""
 function create_voting_contours!(ga, df;
     geometry_col=:geometry,
     value_col=:republican_pct,  # or :democratic_pct, :third_party_pct
@@ -109,7 +137,38 @@ function create_voting_contours!(ga, df;
 end
 
 
-# Function to create filled contours (like topographic maps)
+"""
+    create_filled_voting_contours!(ga, df; geometry_col=:geometry, value_col=:republican_pct, resolution=150, colormap=:RdBu)
+
+Create a filled contour plot (like a topographic map) showing spatial interpolation of a value across geographic regions.
+
+# Arguments
+- `ga`: An existing Makie plot axis/figure to add filled contours to
+- `df`: DataFrame containing geometry and value columns for interpolation
+- `geometry_col::Symbol=:geometry`: Column name containing ArchGDAL geometry objects (default: `:geometry`)
+- `value_col::Symbol=:republican_pct`: Column name containing numeric values to interpolate (default: `:republican_pct`)
+  Can also use `:democratic_pct`, `:third_party_pct`, margin data, or any numeric column
+- `resolution::Int=150`: Grid resolution for interpolation (higher = smoother but slower)
+- `colormap::Symbol=:RdBu`: Makie colormap for the filled regions
+  Use `:RdBu` for red-blue diverging (good for margins), `:viridis` for sequential data, etc.
+
+# Returns
+- Tuple of (filled_contours, interpolated_grid_Z, x_grid, y_grid)
+
+# Details
+- Uses Gaussian kernel density weighting for smooth interpolation
+- Adaptive bandwidth based on data extent (slightly larger than `create_voting_contours!` for visibility)
+- Draws both filled regions and contour lines for dual representation
+- Filled regions have transparency (alpha=0.7) to show layer composition
+- Contour lines overlaid in black for clarity
+- Designed for political/electoral data visualization
+
+# Example
+```julia
+fig, ax, plt = scatter(counties_df.longitude, counties_df.latitude)
+cf, Z, x_grid, y_grid = create_filled_voting_contours!(ax, counties_df, value_col=:margin_pct, colormap=:RdBu)
+```
+"""
 function create_filled_voting_contours!(ga, df;
     geometry_col=:geometry,
     value_col=:republican_pct,

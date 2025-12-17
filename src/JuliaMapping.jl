@@ -14,6 +14,7 @@ using DataFramesMeta
 using Dates
 using Distances
 using Distributions
+using FreeTypeAbstraction
 using GeoDataFrames
 using GeoMakie
 using GeometryBasics
@@ -51,6 +52,7 @@ include("hard_wrap.jl")
 include("haversine_distance_km.jl")
 include("hist_dist.jl")
 include("inspect_shp.jl")
+include("is_font_available.jl")
 include("make_geographic_circle.jl")
 include("make_marker.jl")
 include("margins.jl")
@@ -96,6 +98,7 @@ export add_col_totals,
        hard_wrap,
        haversine_distance_km,
        inspect_shp,
+       is_font_available,
        log_dist,
        make_combined_table,
        make_geographic_circle,

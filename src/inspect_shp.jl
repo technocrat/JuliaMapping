@@ -2,8 +2,28 @@
     inspect_shp(path::String)
 
 Prints the structure and field names of a shapefile for inspection.
-"""
 
+# Arguments
+- `path::String`: Path to the shapefile (.shp file)
+
+# Details
+This function reads a shapefile and prints:
+- Layer name
+- Feature count (number of records)
+- All field/column names available in the shapefile
+
+# Example
+```julia
+inspect_shp("/path/to/data.shp")
+# Output:
+# Layer name: data
+# Feature count: 1234
+# Fields:
+#  - ID
+#  - NAME
+#  - geometry
+```
+"""
 function inspect_shp(path::String)
     dataset = ArchGDAL.read(path)
     layer = ArchGDAL.getlayer(dataset, 0)
