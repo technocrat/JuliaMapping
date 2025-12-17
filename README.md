@@ -1,6 +1,6 @@
 # JuliaMapping
 
-A comprehensive Julia package for mapping, geospatial analysis, and data visualization. This package provides utilities for geographic calculations, coordinate transformations, data processing, and visualization of geospatial data.
+This Julia package is a companion to *Julia Mapping: A Practical Guide* (in press 2025) for mapping, geospatial analysis, and data visualization. This package provides utilities for geographic calculations, coordinate transformations, data processing, and visualization of geospatial data.
 
 ## Installation
 
@@ -15,20 +15,30 @@ Pkg.add("JuliaMapping")
 - **Distance Calculations**: Haversine distance between geographic points
 - **Coordinate Transformations**: DMS (Degrees-Minutes-Seconds) to decimal degrees conversion
 - **Centroid Extraction**: Extract centroids from geographic shapes
+- **Geographic Shapes**: Generate geographic circles and custom markers
 
 ### Data Processing
 - **Text Utilities**: String formatting, hard wrapping, splitting text
 - **Table Utilities**: Add margins/totals to DataFrames, format tables as text
 - **Numeric Formatting**: Percentage formatting, comma formatting for numbers
+- **Type Conversion**: Automatic type conversion and formatting utilities
+
+### Statistical Analysis
+- **Distribution Analysis**: Skewness detection, uniformity assessment
+- **Clustering Detection**: Identify natural clusters in data
+- **Binning Recommendations**: Compare quantile vs. Fisher-Jenks methods
+- **Data Spread Assessment**: Evaluate data distribution patterns
 
 ### Visualization
 - **Color Schemes**: Comprehensive color palettes for mapping
 - **Plotting Utilities**: Color scheme grids, histograms, small multiples
 - **Mapping Functions**: Contour generation, dot density maps, radius maps
+- **Electoral Visualization**: Specialized contour functions for political data
 
 ### Geospatial Data
 - **Shapefile Inspection**: Tools to examine shapefile contents
 - **Geographic Constants**: State codes, EPSG codes, coordinate systems
+- **Spatial Operations**: Union, clipping, and boundary operations
 - **Statistical Functions**: Point pattern analysis, hypothesis testing
 
 ## Quick Start
@@ -116,6 +126,37 @@ df = DataFrame(
 df_with_totals = add_totals(df, cols_to_sum=["Population", "Area"])
 println(df_with_totals)
 ```
+
+## Testing
+
+This package has comprehensive test coverage with 98 test cases covering all major functions:
+
+```julia
+# Run tests from the package directory
+using Pkg
+Pkg.test("JuliaMapping")
+```
+
+Test coverage includes:
+- Geographic calculations and coordinate transformations
+- Data processing and formatting utilities
+- Statistical analysis functions
+- Margin and table operations
+- String manipulation
+- Type conversion and validation
+
+## Documentation
+
+Comprehensive documentation is available through Julia's built-in help system:
+
+```julia
+using JuliaMapping
+?haversine_distance_km  # View function docstring
+?with_commas
+?add_totals
+```
+
+For full documentation, visit the generated docs in `docs/build/index.html`.
 
 ## Dependencies
 
