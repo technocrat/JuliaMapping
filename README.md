@@ -156,7 +156,7 @@ using JuliaMapping
 ?add_totals
 ```
 
-For full documentation, visit the generated docs in `docs/build/index.html`.
+For full documentation, visit `https://juliamapping.com/documentation`.
 
 ## Dependencies
 
